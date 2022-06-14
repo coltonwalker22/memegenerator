@@ -8,7 +8,7 @@ export default function Meme(){
     const [meme, setMeme] = useState({
         topText:"",
         bottomText:"",
-        randomImage:"http://localhost:3000//1bij.jpg",
+        randomImage:"/img/1bij.jpg",
 
     })
 
