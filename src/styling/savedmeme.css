@@ -1,0 +1,66 @@
+
+
+.meme{
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.meme-buttons{
+    display: inline-block;
+  
+}
+
+.savedmeme-edit{
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    padding: 10px 10px;
+    margin-right: 20px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+    border-radius: 10px;
+}
+
+.savedmeme-delete{
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    padding: 10px 10px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+    border-radius: 10px;
+
+
+}
+
+
+.edit-container{
+    margin-bottom: 20px;
+}
+
+.edit-topText{
+    margin-right: 20px;
+}
+
+.edit-bottomText{
+    margin-right: 20px;
+}
+
+.edit-savebutton{
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

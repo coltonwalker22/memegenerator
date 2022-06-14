@@ -1,0 +1,45 @@
+.header-container{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    background: rgb(113,31,141);
+    background: linear-gradient(90deg, rgba(113,31,141,1) 0%, rgba(107,34,132,1) 36%, rgba(155,37,196,1) 74%, rgba(166,38,211,1) 100%);
+}
+
+.troll-image{
+    display: inline;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+
+.title{
+    margin: 0;
+    display: flex;
+    font-size: 20px;
+    margin-right: 30px;
+    
+
+}
+
+.name{
+    margin: 0 auto;
+    margin-left: 30px;
+    margin-top:40px;
+    color: white;
+    font-family: inter;
+}
+
+.project-title{
+    display: inline;
+    margin: auto;
+    padding-bottom: 15px;
+    margin-right: 150px;
+    color: white;
+    font-family: inter;
+    font-size: 25px;
+    
+    
+}
