@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 export default function Savedmeme (props){
-  const {randomImage, topText, bottomText, setEditMode, editMode, editMeme, deleteMeme, newInput, setNewInput, id} = props
+  const {randomImage, topText, bottomText, deleteMeme,editMeme, setSavedMemes, id} = props
 console.log("props:",props)
  
  function onChange(event){
@@ -21,11 +21,34 @@ console.log("props.id:", props.id)
 
 // }
 
-function updateMeme(event){
-    event.preventDefault()
+
+    // setting a useState for editMode where its set to false.
+    const [editMode, setEditMode] = useState(false)
+
+    const updateMeme = () => {
+    setEditMode(prevState => !prevState)
+    }
+
+    //local state passed through savedmeme component (as a prop)
+    // needed a place store the new value after performing "Editing mode"
+    const [newInput, setNewInput] = useState({
+        topText: "",
+        bottomText: "", 
+    })
+
+    // function editMeme(id, newInput) {
+    //     // setEditMode(true) 
+
+  
+const saveMeme = () => {
     editMeme(id, newInput)
-    setEditMode(false)
+    setEditMode(false)  
+
 }
+
+
+
+
 
 // function handleDelete(event){
 // event.preventDefault()
@@ -64,12 +87,16 @@ console.log("newInput:", newInput)
                 name="bottomText"
                 onChange={onChange}
                 />
-                <div className="edit-savebutton" onClick={updateMeme}>Save</div>
                 </div> 
                 : null }
         
             <div className="meme-buttons">
-                <div onClick={()=>editMeme(id, newInput)} className="savedmeme-edit">Edit</div>
+                {editMode
+                ? <>
+                          <div className="edit-savebutton" onClick={saveMeme}>Save</div>
+                </>:
+                <div onClick={updateMeme} className="savedmeme-edit">Edit</div>               
+                }
                 <div onClick={()=>deleteMeme(id)} className="savedmeme-delete">Delete</div>
             </div>
         

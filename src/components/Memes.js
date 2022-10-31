@@ -73,29 +73,12 @@ export default function Meme(){
 
      }
 
-      // setting a useState for editMode where its set to false.
-    const [editMode, setEditMode] = useState(false)
-
-    //local state passed through savedmeme component (as a prop)
-    // needed a place store the new value after performing "Editing mode"
-     const [newInput, setNewInput] = useState({
-         topText: "",
-         bottomText: "", 
-     })
-
-    // function editMeme(id, newInput) {
-    //     // setEditMode(true) 
-
-
-
-    function editMeme(id, newInput){
-        setEditMode(true);
+     function editMeme(id, newInput){
         setSavedMemes(prevMeme => prevMeme.map((meme, i) => ( i === id ? 
         {...meme, topText : newInput.topText, bottomText : newInput.bottomText} : meme)))
-     
-
-
+    
      }
+
     // getting the value of the text areas. For the editedMeme, using .find to match the meme.id.
     // While setMemes sets all savedMemes into an array.
 
@@ -134,9 +117,7 @@ export default function Meme(){
         className="save-button">Save Meme</button>
         <div>
             <hr/>
-       {savedMemes.map((item, index) => <Savedmeme {...item} savedMemes={savedMemes} deleteMeme={deleteMeme} newInput={newInput}
-        setNewInput={setNewInput} editMeme={editMeme} editMode={editMode}  
-        setEditMode={setEditMode} id={index} key={index}/>)}
+       {savedMemes.map((item, index) => <Savedmeme {...item} editMeme={editMeme} savedMemes={savedMemes} deleteMeme={deleteMeme} id={index} key={index}/>)}
         </div>
 
         </main>

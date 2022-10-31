@@ -56,11 +56,12 @@
     display: inline-block;
     height: 30px;
     width: 80px;
+    padding: 10px 10px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
     color: white;
     cursor: pointer;
     font-size: 20px;
     font-family: "Karla", sans-serif;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
